@@ -4,6 +4,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/tasks.js';
 import Task from './Task.jsx';
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class App extends Component {
           onClick={this.toggleHideCompleted.bind(this)} />
           Hide Completed Tasks
         </label>
+        <AccountsUIWrapper />
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type='text' placeholder='enter to do' ref='textInput' />
         </form>
